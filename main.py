@@ -1,4 +1,4 @@
-#  encoding utf-8
+# coding=utf-8
 from log_file import log_file
 from log_file_path import log_file_path
 

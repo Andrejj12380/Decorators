@@ -8,7 +8,8 @@ def log_file(function):
 	def new_function(*args, **kwargs):
 		with open(path, 'a', encoding = 'utf-8') as log_file:
 			date = datetime.datetime.now()
-			data = f'{date} {new_function.__name__} {args} {kwargs} {log_file}\n'
+			result = function(*args)
+			data = f'{date} {new_function.__name__} {args} {kwargs} {result}\n'
 			log_file.write(data)
 			return log_file
 
