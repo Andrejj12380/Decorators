@@ -11,6 +11,6 @@ def log_file(function):
 			result = function(*args)
 			data = f'{date} {new_function.__name__} {args} {kwargs} {result}\n'
 			log_file.write(data)
-			return log_file
+			return result
 
 	return new_function
